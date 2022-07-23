@@ -1,0 +1,2773 @@
+cycle - 1
+L.D F0, 0(R1)        : 1 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       1|     L.D| 16.000000|  0.000000|     255|       0|       0|       2|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add2|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Mul0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : Load0 F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 2
+L.D F0, 0(R1)        : 1 - 0 - 0
+L.D F2, 0(R0)        : 2 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       1|     L.D| 16.000000|  0.000000|     255|       0|      16|       1|
+   Load1|       1|     L.D|  0.000000|  0.000000|     255|       0|       0|       2|
+  Store0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add2|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Mul0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : Load0 F 2 : Load1 F 4 : (null) F 6 : (null) F 8 : (null) F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 3
+L.D F0, 0(R1)        : 1 - 3 - 0
+L.D F2, 0(R0)        : 2 - 0 - 0
+DIV.D F4, F0, F2     : 3 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       1|     L.D| 16.000000|  0.000000|     255|       0|      16|       0|
+   Load1|       1|     L.D|  0.000000|  0.000000|     255|       0|       0|       1|
+  Store0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add2|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  0.000000|       0|       1|       0|      40|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : Load0 F 2 : Load1 F 4 : Mul0 F 6 : (null) F 8 : (null) F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 4
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 0
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       1|     L.D|  0.000000|  1.000000|     255|     255|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  0.000000|     255|       1|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : Load1 F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 5
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 6
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      39|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 7
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      38|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 8
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      37|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 9
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      36|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 10
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      35|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 11
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      34|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 12
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      33|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 13
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      32|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 14
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      31|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 15
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      30|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 16
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      29|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 17
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      28|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 18
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      27|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 19
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      26|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 20
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      25|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 21
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      24|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 22
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      23|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 23
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      22|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 24
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      21|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 25
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      20|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 26
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      19|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 27
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      18|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 28
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      17|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 29
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      16|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 30
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      15|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 31
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      14|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 32
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      13|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 33
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      12|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 34
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      11|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 35
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      10|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 36
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       9|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 37
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       8|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 38
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       7|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 39
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       6|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 40
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       5|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 41
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       4|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 42
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       3|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 43
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       2|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 44
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 0 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       1|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 45
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 0
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul1|       1|   DIV.D|  1.000000|  0.000000|     255|       7|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : Mul0 F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 46
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      40|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : Mul1 F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 47
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      39|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : Mul1 F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 48
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       1|   SUB.D|  1.000000|  1.000000|     255|     255|       0|       2|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      38|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : Add0 F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 49
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 0 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       1|   SUB.D|  1.000000|  1.000000|     255|     255|       0|       1|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      37|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : Add0 F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 50
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 0
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       1|   SUB.D|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      36|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : Add0 F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 51
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      35|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 52
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      34|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 53
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      33|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 54
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      32|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 55
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      31|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 56
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      30|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 57
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      29|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 58
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      28|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 59
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      27|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 60
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      26|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 61
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      25|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 62
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      24|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 63
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      23|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 64
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      22|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 65
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      21|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 66
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      20|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 67
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      19|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 68
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      18|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 69
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      17|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 70
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      16|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 71
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      15|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 72
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      14|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 73
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      13|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 74
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      12|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 75
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      11|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 76
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      10|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 77
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       9|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 78
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       8|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 79
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       7|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 80
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       6|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 81
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       5|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 82
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       4|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 83
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       3|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 84
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       2|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 85
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 0 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       1|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 86
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 0
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  0.000000|  1.000000|       8|     255|       0|      40|
+    Mul1|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 87
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      40|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 88
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      39|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 89
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      38|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 90
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      37|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 91
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      36|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 92
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      35|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 93
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      34|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 94
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      33|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 95
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      32|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 96
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      31|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 97
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      30|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 98
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      29|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 99
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      28|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 100
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      27|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 101
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      26|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 102
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      25|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 103
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      24|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 104
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      23|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 105
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      22|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 106
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      21|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 107
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      20|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 108
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      19|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 109
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      18|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 110
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      17|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 111
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      16|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 112
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      15|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 113
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      14|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 114
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      13|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 115
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      12|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 116
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      11|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 117
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|      10|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 118
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       9|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 119
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       8|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 120
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       7|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 121
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       6|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 122
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       5|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 123
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       4|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 124
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       3|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 125
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       2|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 126
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 0 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       1|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 127
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 127 - 0
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       1|   DIV.D|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : Mul0 F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 128
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 127 - 128
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+cycle - 129
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 127 - 128
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+      FU|    busy|  opcode|        vj|        vk|      qj|      qk|    addr|   cycle|
+   Load0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+   Load1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+  Store0|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+  Store1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Add1|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Add2|       0|  (null)|  1.000000|  1.000000|     255|     255|       0|       0|
+    Mul0|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+    Mul1|       0|  (null)|  0.000000|  0.000000|       0|       0|       0|       0|
+Floating Point Registers : 
+ F 0 : (null) F 2 : (null) F 4 : (null) F 6 : (null) F 8 : (null) F10 : (null) F12 : (null) F14 : (null)
+ F16 : (null) F18 : (null) F20 : (null) F22 : (null) F24 : (null) F26 : (null) F28 : (null) F30 : (null)
+
+== Result ==
+L.D F0, 0(R1)        : 1 - 3 - 4
+L.D F2, 0(R0)        : 2 - 4 - 5
+DIV.D F4, F0, F2     : 3 - 45 - 46
+DIV.D F8, F6, F4     : 4 - 86 - 87
+DIV.D F10, F8, F4    : 47 - 127 - 128
+SUB.D F8, F0, F2     : 48 - 50 - 51
+
+ F 0 : 1.000000 F 2 : 1.000000 F 4 : 1.000000 F 6 : 1.000000
+ F 8 : 0.000000 F10 : 1.000000 F12 : 1.000000 F14 : 1.000000
+ F16 : 1.000000 F18 : 1.000000 F20 : 1.000000 F22 : 1.000000
+ F24 : 1.000000 F26 : 1.000000 F28 : 1.000000 F30 : 1.000000
+
+ R 0 :    0 R 1 :   16 R 2 :    0 R 3 :    0
+ R 4 :    0 R 5 :    0 R 6 :    0 R 7 :    0
+ R 8 :    0 R 9 :    0 R10 :    0 R11 :    0
+ R12 :    0 R13 :    0 R14 :    0 R15 :    0
+ R16 :    0 R17 :    0 R18 :    0 R19 :    0
+ R20 :    0 R21 :    0 R22 :    0 R23 :    0
+ R24 :    0 R25 :    0 R26 :    0 R27 :    0
+ R28 :    0 R29 :    0 R30 :    0 R31 :    0
+
+ M0 : 1.000000 M1 : 1.000000 M2 : 1.000000 M3 : 1.000000
+ M4 : 1.000000 M5 : 1.000000 M6 : 1.000000 M7 : 1.000000
+
+ M 0 : 0 M 1 : 0 M 2 : 0 M 3 : 0 M 4 : 0 M 5 : 0 M 6 : -16 M 7 : 63
+ M 8 : 0 M 9 : 0 M10 : 0 M11 : 0 M12 : 0 M13 : 0 M14 : -16 M15 : 63
+ M16 : 0 M17 : 0 M18 : 0 M19 : 0 M20 : 0 M21 : 0 M22 : -16 M23 : 63
+ M24 : 0 M25 : 0 M26 : 0 M27 : 0 M28 : 0 M29 : 0 M30 : -16 M31 : 63
+ M32 : 0 M33 : 0 M34 : 0 M35 : 0 M36 : 0 M37 : 0 M38 : -16 M39 : 63
+ M40 : 0 M41 : 0 M42 : 0 M43 : 0 M44 : 0 M45 : 0 M46 : -16 M47 : 63
+ M48 : 0 M49 : 0 M50 : 0 M51 : 0 M52 : 0 M53 : 0 M54 : -16 M55 : 63
+ M56 : 0 M57 : 0 M58 : 0 M59 : 0 M60 : 0 M61 : 0 M62 : -16 M63 : 63
+
